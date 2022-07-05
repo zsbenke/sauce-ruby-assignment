@@ -1,6 +1,6 @@
-# Bare Ruby application
+# Sauce Ruby Assignment
 
-Description TBD…
+This application mangles Instagram JSON files according to the assignment requirements.
 
 ## Usage
 
