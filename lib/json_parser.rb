@@ -1,10 +1,7 @@
-# frozen_string_literal: true
-
 require 'yajl'
 
-# Parses JSON file into an object.
 class JsonParser
-  attr_reader :path, :object
+  attr_reader :path, :parsed_object
 
   def initialize(path)
     return unless File.exist?(path)
@@ -28,7 +25,7 @@ class JsonParser
 
   private
 
-  def object_parsed(obj)
-    @object = obj
+  def object_parsed(object)
+    @parsed_object = object
   end
 end

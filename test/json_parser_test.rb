@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'minitest/autorun'
 require_relative '../lib/json_parser'
 
@@ -20,18 +18,12 @@ class JsonParserTest < Minitest::Test
   def test_parsing_a_json
     @parser.parse
 
-    assert @parser.object.is_a?(Array)
-    assert_equal 1000, @parser.object.count
+    assert @parser.parsed_object.is_a?(Array)
+    assert_equal 1000, @parser.parsed_object.count
 
-    @parser.object.each do |object|
+    @parser.parsed_object.each do |object|
       assert object.is_a?(Hash)
       assert_equal %i[_id id type username bio followed_by mentions hashtags], object.keys
-    end
-  end
-
-  def test_parsing_a_json_with_a_block
-    @parser.parse do |line|
-      assert_equal String, line.class
     end
   end
 end
