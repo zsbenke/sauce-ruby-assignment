@@ -25,6 +25,7 @@ GEM
       parser (>= 3.1.1.0)
     ruby-progressbar (1.11.0)
     unicode-display_width (2.2.0)
+    yajl-ruby (1.4.3)
 
 PLATFORMS
   arm64-darwin-21
@@ -33,6 +34,7 @@ DEPENDENCIES
   minitest
   rake
   rubocop
+  yajl-ruby
 
 BUNDLED WITH
    2.3.17
